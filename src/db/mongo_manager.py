@@ -20,3 +20,5 @@ class MongoManager:
     
     def close(self):
         self.client.close()
+
+      
