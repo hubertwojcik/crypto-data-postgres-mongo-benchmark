@@ -23,13 +23,38 @@ services:
     volumes:
       - mongo_data:/data/db
 
-  # (opcjonalnie) proste GUI do Mongo
-  # mongo-express:
-  #   image: mongo-express:1.0.2
-  #   restart: unless-stopped
-  #   ports: ["8081:8081"]
-  #   environment:
-  #     ME_CONFIG_MONGODB_SERVER: mongo
+  jupyter:
+    image: python:3.12
+    container_name: jupyter
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    ports:
+      - "8888:8888"
+    depends_on:
+      - postgres
+      - mongo
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - POSTGRES_DB=${POSTGRES_DB:-social}
+      - POSTGRES_USER=${POSTGRES_USER:-user}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-pass}
+      - MONGO_URI=mongodb://mongo:27017
+      - MONGO_DB=${MONGO_DB:-social}
+    command: >
+      sh -c "pip install --upgrade pip &&
+             pip install -r requirements.txt &&
+             jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
+             --ServerApp.token='' --ServerApp.password=''
+             --ServerApp.allow_origin='*' --ServerApp.disable_check_xsrf=True
+             --ServerApp.allow_remote_access=True
+             --ServerApp.open_browser=False
+             --ServerApp.allow_root=True
+             --ServerApp.trust_xheaders=True
+             --IdentityProvider.token=''
+             --ServerApp.base_url='/'"
 
 volumes:
   pg_data:
