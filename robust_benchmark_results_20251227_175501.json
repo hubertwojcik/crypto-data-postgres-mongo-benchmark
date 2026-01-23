@@ -1,0 +1,344 @@
+{
+  "10K": {
+    "dataset_info": {
+      "name": "10K",
+      "records": 10000,
+      "clean_time": 0.107506667,
+      "total_time": 20.40440025
+    },
+    "load_times": {
+      "postgresql": 19.099055334,
+      "mongodb": 0.3808437910000002
+    },
+    "crud_results": {
+      "READ: Count All Tweets": {
+        "postgresql": 0.0025236660000018674,
+        "mongodb": 0.005877749999999793,
+        "status": "success"
+      },
+      "READ: Recent Tweets": {
+        "postgresql": 0.004034415999999652,
+        "mongodb": 0.002195000000000391,
+        "status": "success"
+      },
+      "READ: Search by Hashtag": {
+        "postgresql": 0.00951816599999944,
+        "mongodb": 0.0022697919999998817,
+        "status": "success"
+      },
+      "READ: User Statistics": {
+        "postgresql": 0.006639458000002207,
+        "mongodb": 0.012012665999996841,
+        "status": "success"
+      },
+      "READ: Popular Hashtags": {
+        "postgresql": 0.014703125000000483,
+        "mongodb": 0.016881541000000055,
+        "status": "success"
+      },
+      "READ: Daily Statistics": {
+        "postgresql": 0.0016801669999999547,
+        "mongodb": 0.0009524170000005938,
+        "status": "success"
+      },
+      "READ: Complex Aggregations": {
+        "postgresql": 0.016486249999999814,
+        "mongodb": 0.01557441699999984,
+        "status": "success"
+      },
+      "READ: User Ranking": {
+        "postgresql": 0.0032258330000018987,
+        "mongodb": 0.013211999999999335,
+        "status": "success"
+      },
+      "READ: Daily Activity": {
+        "postgresql": 0.0007859580000015853,
+        "mongodb": 0.0008749159999972278,
+        "status": "success"
+      },
+      "READ: Hashtag Trends": {
+        "postgresql": 0.0007069160000021668,
+        "mongodb": 0.0006205839999999796,
+        "status": "success"
+      },
+      "CREATE: New Tweet with New User": {
+        "postgresql": 0.002233999999997849,
+        "mongodb": 0.0006262499999998283,
+        "status": "success"
+      },
+      "CREATE: Tweet with Existing User": {
+        "postgresql": 0.0019022499999969966,
+        "mongodb": 0.0003105000000012126,
+        "status": "success"
+      },
+      "CREATE: Tweet with Many Hashtags": {
+        "postgresql": 0.006953666000001135,
+        "mongodb": 0.0005067089999997165,
+        "status": "success"
+      },
+      "CREATE: Batch Insert": {
+        "postgresql": 0.04907270800000063,
+        "mongodb": 0.002799583000001604,
+        "status": "success"
+      },
+      "UPDATE: Tweet Text": {
+        "postgresql": 0.000998625000001141,
+        "mongodb": 0.0014697090000019841,
+        "status": "success"
+      },
+      "UPDATE: User Data": {
+        "postgresql": 0.0008689170000018009,
+        "mongodb": 0.000502583000002943,
+        "status": "success"
+      },
+      "UPDATE: Bulk Update": {
+        "postgresql": 0.045788583000000216,
+        "mongodb": 0.12959904099999875,
+        "status": "success"
+      },
+      "DELETE: Single Tweet": {
+        "postgresql": 0.001646125000000609,
+        "mongodb": 0.0009001669999975093,
+        "status": "success"
+      },
+      "DELETE: User's All Tweets": {
+        "postgresql": 0.0013866670000020065,
+        "mongodb": 0.0012834159999997041,
+        "status": "success"
+      },
+      "DELETE: Old Tweets": {
+        "postgresql": 0.029633833999998416,
+        "mongodb": 0.0685431670000014,
+        "status": "success"
+      }
+    }
+  },
+  "100K": {
+    "dataset_info": {
+      "name": "100K",
+      "records": 100000,
+      "clean_time": 0.834488125,
+      "total_time": 158.486401167
+    },
+    "load_times": {
+      "postgresql": 0.0,
+      "mongodb": 4.067034000000007
+    },
+    "crud_results": {
+      "READ: Count All Tweets": {
+        "postgresql": 0.009893750000003365,
+        "mongodb": 0.029378624999992553,
+        "status": "success"
+      },
+      "READ: Recent Tweets": {
+        "postgresql": 0.04266479200001072,
+        "mongodb": 0.00328829099998984,
+        "status": "success"
+      },
+      "READ: Search by Hashtag": {
+        "postgresql": 0.056022916999978634,
+        "mongodb": 0.0017190420000190443,
+        "status": "success"
+      },
+      "READ: User Statistics": {
+        "postgresql": 0.03409787499998629,
+        "mongodb": 0.09890833299999713,
+        "status": "success"
+      },
+      "READ: Popular Hashtags": {
+        "postgresql": 0.15993391599999995,
+        "mongodb": 0.1611855830000195,
+        "status": "success"
+      },
+      "READ: Daily Statistics": {
+        "postgresql": 0.005333249999978307,
+        "mongodb": 0.001005874999975731,
+        "status": "success"
+      },
+      "READ: Complex Aggregations": {
+        "postgresql": 0.13859716700000035,
+        "mongodb": 0.20098674999999844,
+        "status": "success"
+      },
+      "READ: User Ranking": {
+        "postgresql": 0.020166209000024082,
+        "mongodb": 0.094040624999991,
+        "status": "success"
+      },
+      "READ: Daily Activity": {
+        "postgresql": 0.002514042000001382,
+        "mongodb": 0.0008735830000148326,
+        "status": "success"
+      },
+      "READ: Hashtag Trends": {
+        "postgresql": 0.0024014580000084607,
+        "mongodb": 0.0008119999999962602,
+        "status": "success"
+      },
+      "CREATE: New Tweet with New User": {
+        "postgresql": 0.0026995839999983673,
+        "mongodb": 0.0006384579999973994,
+        "status": "success"
+      },
+      "CREATE: Tweet with Existing User": {
+        "postgresql": 0.0020142919999841524,
+        "mongodb": 0.0005896670000140602,
+        "status": "success"
+      },
+      "CREATE: Tweet with Many Hashtags": {
+        "postgresql": 0.00866241699998227,
+        "mongodb": 0.0006931669999801215,
+        "status": "success"
+      },
+      "CREATE: Batch Insert": {
+        "postgresql": 0.05131258299999786,
+        "mongodb": 0.002822874999992564,
+        "status": "success"
+      },
+      "UPDATE: Tweet Text": {
+        "postgresql": 0.0006530830000031074,
+        "mongodb": 0.000563041000020803,
+        "status": "success"
+      },
+      "UPDATE: User Data": {
+        "postgresql": 0.0009718330000225706,
+        "mongodb": 0.0005017090000194457,
+        "status": "success"
+      },
+      "UPDATE: Bulk Update": {
+        "postgresql": 0.33114750000001436,
+        "mongodb": 0.6614851250000129,
+        "status": "success"
+      },
+      "DELETE: Single Tweet": {
+        "postgresql": 0.0010688749999872016,
+        "mongodb": 0.0006102079999834586,
+        "status": "success"
+      },
+      "DELETE: User's All Tweets": {
+        "postgresql": 0.0008351660000016636,
+        "mongodb": 0.0010558749999916017,
+        "status": "success"
+      },
+      "DELETE: Old Tweets": {
+        "postgresql": 0.2114762499999756,
+        "mongodb": 0.8235865419999868,
+        "status": "success"
+      }
+    }
+  },
+  "1M": {
+    "dataset_info": {
+      "name": "1M",
+      "records": 1000000,
+      "clean_time": 10.389432083000003,
+      "total_time": 986.5599803330001
+    },
+    "load_times": {
+      "postgresql": 0.0,
+      "mongodb": 43.579083957999956
+    },
+    "crud_results": {
+      "READ: Count All Tweets": {
+        "postgresql": 0.04799070799981564,
+        "mongodb": 0.31071316700013085,
+        "status": "success"
+      },
+      "READ: Recent Tweets": {
+        "postgresql": 0.09363037500020255,
+        "mongodb": 0.0013154170001143939,
+        "status": "success"
+      },
+      "READ: Search by Hashtag": {
+        "postgresql": 0.32045366600004854,
+        "mongodb": 0.0014013339998655283,
+        "status": "success"
+      },
+      "READ: User Statistics": {
+        "postgresql": 0.2552107919998434,
+        "mongodb": 0.9423782910000682,
+        "status": "success"
+      },
+      "READ: Popular Hashtags": {
+        "postgresql": 0.8446028750001915,
+        "mongodb": 2.1087411660000726,
+        "status": "success"
+      },
+      "READ: Daily Statistics": {
+        "postgresql": 0.01310349999994287,
+        "mongodb": 0.0009929580000971328,
+        "status": "success"
+      },
+      "READ: Complex Aggregations": {
+        "postgresql": 0.7881278749998728,
+        "mongodb": 3.07541720800009,
+        "status": "success"
+      },
+      "READ: User Ranking": {
+        "postgresql": 0.18742437500009146,
+        "mongodb": 0.9296332499998243,
+        "status": "success"
+      },
+      "READ: Daily Activity": {
+        "postgresql": 0.011197916999890367,
+        "mongodb": 0.0019202089999907912,
+        "status": "success"
+      },
+      "READ: Hashtag Trends": {
+        "postgresql": 0.009995916999969268,
+        "mongodb": 0.0009144160001142154,
+        "status": "success"
+      },
+      "CREATE: New Tweet with New User": {
+        "postgresql": 0.002327791999960027,
+        "mongodb": 0.000569125000083659,
+        "status": "success"
+      },
+      "CREATE: Tweet with Existing User": {
+        "postgresql": 0.001707209000187504,
+        "mongodb": 0.00039808299993637775,
+        "status": "success"
+      },
+      "CREATE: Tweet with Many Hashtags": {
+        "postgresql": 0.008728166999844689,
+        "mongodb": 0.0007775419999234146,
+        "status": "success"
+      },
+      "CREATE: Batch Insert": {
+        "postgresql": 0.05697195900006591,
+        "mongodb": 0.004535958000133178,
+        "status": "success"
+      },
+      "UPDATE: Tweet Text": {
+        "postgresql": 0.0009530419999919104,
+        "mongodb": 0.0005900420001125894,
+        "status": "success"
+      },
+      "UPDATE: User Data": {
+        "postgresql": 0.0006747909999376134,
+        "mongodb": 0.000362292000090747,
+        "status": "success"
+      },
+      "UPDATE: Bulk Update": {
+        "postgresql": 1.6598398339999676,
+        "mongodb": 5.20775787499997,
+        "status": "success"
+      },
+      "DELETE: Single Tweet": {
+        "postgresql": 0.001907500000015716,
+        "mongodb": 0.0009230419998402795,
+        "status": "success"
+      },
+      "DELETE: User's All Tweets": {
+        "postgresql": 0.0010283750000326108,
+        "mongodb": 0.005458166999915193,
+        "status": "success"
+      },
+      "DELETE: Old Tweets": {
+        "postgresql": 1.8016506670001036,
+        "mongodb": 10.195174041999962,
+        "status": "success"
+      }
+    }
+  }
+}

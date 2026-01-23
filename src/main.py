@@ -210,6 +210,18 @@ def clear_databases(pg: PostgresManager, mg: MongoManager):
     
     print("✅ Bazy danych wyczyszczone!")
 
+def clear_all_caches(pg: PostgresManager, mg: MongoManager):
+    """Wyczyść wszystkie cache przed eksperymentami."""
+    print("\n🧹 Czyszczenie wszystkich cache przed eksperymentami...")
+    
+    # Wyczyść cache PostgreSQL
+    pg.clear_all_caches()
+    
+    # Wyczyść cache MongoDB  
+    mg.clear_all_caches()
+    
+    print("✅ Wszystkie cache wyczyszczone!")
+
 
 def run_basic_benchmarks(pg: PostgresManager, mg: MongoManager):
     """Uruchom podstawowe testy wydajności."""
@@ -303,6 +315,9 @@ def run():
 
     # Wyczyść bazy danych
     clear_databases(pg, mg)
+    
+    # Wyczyść wszystkie cache przed eksperymentami
+    clear_all_caches(pg, mg)
 
     print("🧱 Inicjalizacja schematu / indeksów...")
     pg.init_schema()

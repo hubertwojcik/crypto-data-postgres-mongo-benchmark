@@ -17,3 +17,4 @@ echo "Sprawdź logi:"
 echo "  docker compose logs -f jupyter"
 
 
+

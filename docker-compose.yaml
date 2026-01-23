@@ -24,7 +24,7 @@ services:
       - mongo_data:/data/db
 
   jupyter:
-    image: python:3.12
+    image: python:3.11
     container_name: jupyter
     working_dir: /workspace
     volumes:
@@ -38,23 +38,14 @@ services:
       - JUPYTER_ENABLE_LAB=yes
       - PG_HOST=postgres
       - PG_PORT=5432
-      - POSTGRES_DB=${POSTGRES_DB:-social}
-      - POSTGRES_USER=${POSTGRES_USER:-user}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-pass}
+      - PG_DB=social
+      - PG_USER=postgres
+      - PG_PASS=postgres
       - MONGO_URI=mongodb://mongo:27017
-      - MONGO_DB=${MONGO_DB:-social}
+      - MONGO_DB=social
     command: >
-      sh -c "pip install --upgrade pip &&
-             pip install -r requirements.txt &&
-             jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root
-             --ServerApp.token='' --ServerApp.password=''
-             --ServerApp.allow_origin='*' --ServerApp.disable_check_xsrf=True
-             --ServerApp.allow_remote_access=True
-             --ServerApp.open_browser=False
-             --ServerApp.allow_root=True
-             --ServerApp.trust_xheaders=True
-             --IdentityProvider.token=''
-             --ServerApp.base_url='/'"
+      sh -c "pip install jupyter jupyterlab pandas numpy matplotlib seaborn psycopg2-binary pymongo python-dotenv &&
+             jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root"
 
 volumes:
   pg_data:
